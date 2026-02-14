@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Grace ❤️</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ff7fa8, #ff4d6d);
+      text-align: center;
+      padding: 30px;
+      color: white;
+      overflow-x: hidden;
+      user-select: none; /* Prevents text selection when tapping */
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .heart {
+      font-size: 55px;
+      animation: beat 1s infinite;
+      margin-bottom: 10px;
+    }
+
+    @keyframes beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+
+    button {
+      background: white;
+      color: #ff2d55;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 15px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hiddenBox {
+      display: none;
+      margin-top: 18px;
+      font-size: 18px;
+    }
+
+    /* Floating Roses */
+    .rose {
+      position: fixed;
+      bottom: -20px;
+      font-size: 30px;
+      animation: floatUp 7s infinite;
+      opacity: 0.95;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-950px) rotate(360deg); opacity: 0; }
+    }
+
+    /* Love Letter */
+    #letterContainer { margin-top: 25px; }
+    #letter {
+      background: #ffe6ef;
+      color: #c70039;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 330px;
+      margin: auto;
+      font-size: 18px;
+      display: none;
+      transform-origin: top;
+      animation: unfold 1.4s forwards;
+    }
+
+    @keyframes unfold {
+      0% { transform: scaleY(0); opacity: 0; }
+      60% { transform: scaleY(1.1); opacity: 1; }
+      100% { transform: scaleY(1); opacity: 1; }
+    }
+
+    /* Animated I Love You */
+    #loveText {
+      margin-top: 25px;
+      font-size: 26px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px white;
+      animation: fadePulse 2s infinite;
+    }
+
+    @keyframes fadePulse {
+      0% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0.3; transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://www.dropbox.com/scl/fi/kijba7o1b2a4eixu1p9fz/romantic.mp3?raw=1" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Roses Script -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      let rose = document.createElement("div");
+      rose.className = "rose";
+      rose.innerHTML = "🌹";
+      rose.style.left = Math.random() * 100 + "vw";
+      rose.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(rose);
+    }
+  </script>
+
+  <div class="card">
+    <div class="heart">❤️</div>
+
+    <h1>Happy Valentine's Day, Grace ❤️</h1>
+
+    <p>
+      HAPPY VALENTINE'S DAY TO YOU MY AMAZING, PRETTY, SMART, CARING AND LOVING BABY.
+      Thank you for being in my life — I appreciate you deeply and I love you so much.
+      You make distance feel so small, because my heart is always with you.
+    </p>
+
+    <p>
+      You're my safe place, my joy, and the sweetest part of every day.
+      I cherish everything about you — your kindness, your heart, and your love.
+    </p>
+
+    <!-- Hidden Messages -->
+    <button onclick="document.getElementById('msg1').style.display='block'">Message 1 💌</button>
+    <p id="msg1" class="hiddenBox">My princess, you deserve roses every day. Your soul is beautiful. ❤️</p>
+
+    <button onclick="document.getElementById('msg2').style.display='block'">Message 2 💘</button>
+    <p id="msg2" class="hiddenBox">No distance can stop what I feel for you. You're always with me. 💕</p>
+
+    <button onclick="document.getElementById('msg3').style.display='block'">Message 3 🌹</button>
+    <p id="msg3" class="hiddenBox">You are loved, valued and chosen — by me, Matthew, always. ❤️</p>
+
+    <!-- Love Letter -->
+    <div id="letterContainer">
+      <button onclick="showLetter()">Open Your Love Letter 💞</button>
+      <div id="letter">
+        My dearest Grace,<br><br>
+        This letter is just a small piece of my heart for you.
+        You’ve brought warmth, comfort, joy, and light into my world.
+        No matter the distance between us, your presence stays close.
+        Your love calms me, lifts me, strengthens me.<br><br>
+        You mean more to me than words can ever explain.
+        I cherish you, I appreciate you, and I am grateful for you — always.<br><br>
+        With all my love,<br>
+        <strong>Matthew ❤️</strong>
+      </div>
+    </div>
+
+    <!-- Animated I LOVE YOU -->
+    <div id="loveText">I LOVE YOU, GRACE ❤️</div>
+  </div>
+
+  <script>
+    function showLetter() {
+      document.getElementById('letter').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
